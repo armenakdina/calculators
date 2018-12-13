@@ -1,0 +1,87 @@
+/******************
+** LARGE SCREENS **
+******************/
+@media screen and (min-width: 1008px) {
+	.header {
+		border: solid 1px;
+		background-color: #BE0512;
+		justify-content: space-between;
+	}
+
+	#logo {
+		max-width: 50px;
+	}
+
+	li {
+		list-style-type: none;
+		border: solid 1px black;
+		background-color: white;
+		padding: 5px;
+	}
+
+
+}
+
+
+/******************
+** MEDIUM SCREENS **
+******************/
+@media screen and (min-width: 966px) and (max-width: 1007px) {
+	.header {
+		border: solid 1px;
+		background-color: #BE0512;
+		justify-content: space-between;
+	}
+
+	#logo {
+		max-width: 50px;
+	}
+
+	li {
+		list-style-type: none;
+		border: solid 1px black;
+		background-color: white;
+		padding: 5px;
+	}
+
+	.tools-list {
+		max-width: 300px;
+	}
+
+	.text-under-list {
+		max-width: 300px;
+	}
+
+
+}
+
+/******************
+** SMALL SCREENS **
+******************/
+@media screen and (max-width: 812px) {
+	.header {
+		border: solid 1px;
+		background-color: #BE0512;
+		justify-content: space-between;
+	}
+
+	#logo {
+		max-width: 50px;
+	}
+
+	li {
+		list-style-type: none;
+		border: solid 1px black;
+		background-color: white;
+		padding: 5px;
+	}
+
+	.tools-list {
+		max-width: 30px;
+	}
+
+	.text-under-list {
+		max-width: 30px;
+	}
+
+}

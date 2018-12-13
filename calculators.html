@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title of the document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="header flex-row">
+        <a href="http://www.360medics.com">
+            <img alt="logo360" src="img/logo360.jpeg" id="logo">
+        </a>
+        <p>Rechercher ...</p>
+        <p>Découvrir 360 medics</p>
+    </div>
+
+    <div class="bloc">
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Liste des outils de calculs 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="#">Score de Glasgow</a>
+                    <a href="#">Calcul de la clairance de la créatinine</a>
+                    <a href="#">Risque Cardio-Vasculaire</a>
+                    <a href="#">Surface corporelle</a>
+                    <a href="#">BMI</a>
+                    <a href="#">Test de Maslash - Évaluation Burn-out</a>
+                    <a href="#">Évaluation arthrose hanche</a>
+                    <a href="#">Évaluation arthrose genou</a>
+                    <a href="#">Test de Fagerstrom</a>
+                    <a href="#">Test de DiFranza</a>
+                    <a href="#">Évaluation Dépendance à l'alcool</a>
+                    <a href="#">Convertisseur biologie</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tool-window">
+        <h1>Outil de calcul</h1>
+    </div>
+
+    <div class="sharing-text">
+        <p>Ces outils vous sont utiles ? </br>
+            Partagez-les à vos confrères ! </p>
+    </div>
+    <div class="sharing-buttons flex-column">
+        <div class="sharing-btn flex-row">
+            <i class="fab fa-twitter"></i><p class="share-button-tw">Partager</p>
+        </div>
+        <div class="sharing-btn flex-row">
+            <i class="fab fa-facebook-square"></i><p class="share-button-fb">Partager</p>
+        </div>
+    </div>
+
+    <script>
+        /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

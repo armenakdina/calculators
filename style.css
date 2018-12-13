@@ -1,0 +1,168 @@
+/******************
+** COMMON STYLES **
+******************/
+
+body {
+	background-color: #EFEFEF;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.sharing-btn {
+	border: black solid 1px;
+	max-width: 80px;
+}
+
+.fab {
+	font-size: 2em;
+}
+
+.sharing-btn {
+	padding: 5px 25px 0px 10px;
+}
+
+.share-button-fb {
+	padding-left: 14px;
+}
+
+.share-button-tw {
+	padding-left: 10px;
+}
+/****************************
+** CLIQUABLE DROPDOWN MENU **
+****************************/
+.navbar {
+	overflow: hidden;
+	background-color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 230px;
+	margin-top: 20px;
+}
+
+.navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	cursor: pointer;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.show {
+	display: block;
+}
+
+.tool-window {
+	margin-top: 20px;
+	border: black 1px solid;
+}
+
+/*-------------------------------------------------
+        MEDIA QUERIES
+---------------------------------------------------*/
+/* Large screens */
+@media screen and (min-width : 1024px) {
+	.header {
+		border: solid 1px;
+		background-color: green;
+		justify-content: space-between;
+	}
+
+	#logo {
+		max-width: 50px;
+	}
+
+	li {
+		list-style-type: none;
+		border: solid 1px black;
+		background-color: white;
+		padding: 5px;
+	}
+
+	.tools-list {
+		max-width: 350px;
+	}
+
+	.text-under-list {
+		max-width: 350px;
+	}
+}
+
+/* Small and Medium screens */
+@media screen and (max-width : 1024px) {
+	.header {
+		border: solid 1px;
+		background-color: #BE0512;
+		justify-content: space-between;
+	}
+
+	#logo {
+		max-width: 50px;
+	}
+
+	li {
+		list-style-type: none;
+		border: solid 1px black;
+		background-color: white;
+		padding: 5px;
+	}
+
+	.tools-list {
+		max-width: 350px;
+	}
+
+	.text-under-list {
+		max-width: 350px;
+	}
+}

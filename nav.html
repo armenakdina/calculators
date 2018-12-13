@@ -1,0 +1,67 @@
+<div class="rs-grid">
+    <div class="rs-row">
+
+        <div class="rs-col-8">
+            <div class="rs-nav-collapse{% if (is_tablet() or is_mobile()) %} rs-mobile{% endif %}">
+                <a href="{{ path('default_home') }}" class="small-brand" style="padding-top:5px">
+                    <img class="logo inapp" width="34" height="34" src="{{ asset(seo.logos.red) }}"
+                         alt="Logo 360 medics"/>
+                </a>
+            </div>
+
+            <ul class="rs-nav{% if (is_tablet() or is_mobile()) %} rs-mobile{% endif %}" id="rs-nav-main">
+                <li class="rs-brand">
+                    <a href="{{ path('default_home') }}" class="small-brand">
+                        <img class="logo inapp" width="34" height="34" src="{{ asset(seo.logos.red) }}"
+                             alt="Logo 360 medics"/>
+                    </a>
+                </li>
+                {% if app.user and app.user.isOnNewVersion() == false %}
+                    {{ app.user | userMenuTree() }}
+                {% endif %}
+            </ul>
+        </div>
+
+        {# right utilities user quick menu #}
+        <div class="rs-col-4">
+            {% if app.user %}
+                <ul class="rs-nav-profile">
+                    <li class="rs-profile">
+                        <a href="#" class="profile-badge">
+                            {% if app.user.getPictureWebpath() is not empty %}
+                                <img src="{{ asset(app.user.getPictureWebpath()) }}" width="35" height="35" alt=""/>
+                            {% else %}
+                                {{ app.user|initials }}
+                            {% endif %}
+                        </a>
+                        {% if app.user.isOnNewVersion() == false %}
+                            <ul class="rs-profile-dropdown">
+                                {% if app.user.profession is not null and app.user.profession.id == 2 and app.user.hasRole('ROLE_EXPERT') %}
+                                    <li><a href="{{ old_website_url('/settings', app.user.tempOldWebsiteLoginKey()) }}">Mon
+                                            profil</a></li>
+                                {% else %}
+                                    <li><a href="{{ path('user_settings') }}">Paramètres</a></li>
+                                {% endif %}
+
+                                {% if is_granted('ROLE_PREVIOUS_ADMIN') %}
+                                    <li>
+                                        <a href="{{ path('default_home', {_switch_user: '_exit'}) }}">*!* Quitter le
+                                            role... *!*</a>
+                                    </li>
+                                {% endif %}
+
+                                <li>
+                                    <a href="/logout">Déconnexion</a>
+                                </li>
+                            </ul>
+                        {% endif %}
+                    </li>
+                </ul>
+            {% endif %}
+            <ul class="rs-nav-search">
+                <li>{% include 'MedicalCoreBundle:Search:search_form.html.twig' %}</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
